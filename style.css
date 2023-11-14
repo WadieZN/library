@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-color: #333D51;
+    --second-color: #D3AC2B;
+    --third-color: #CBD0D8;
+    --fourth-color: #F4F3EA;
+}
+
+body {
+    background: #CBD0D8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    width: 100%;
+    background: var(--first-color);
+    color: var(--fourth-color);
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    cursor: pointer;
+    border: 2px solid var(--first-color);
+    border-radius: 7px;
+    width: 100px;
+    height: 40px;
+}
+
+#btn {
+    margin: 20px;
+}
+
+form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--third-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 15px;
+    border: 3px solid var(--first-color);
+    border-radius: 15px;
+}
+
+input:not(:last-of-type) {
+    height: 30px;
+    padding-left: 10px;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(221, 23%, 26%, 0.3);
+    backdrop-filter: blur(3px);
+}
+
+.form {
+    display: none;
+}
+
+.container {
+    border: 3px solid var(--first-color);
+    border-radius: 7px;
+    padding: 15px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: auto-fit;
+    gap: 20px;
+}
+
+.books {
+    overflow: hidden;
+    border: 3px solid var(--first-color);
+    border-radius: 7px;
+    border-left: 15px solid var(--first-color);
+    background: var(--fourth-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 80%;
+}
+
+.info {
+    padding: 15px;
+}
+
+.buttons {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.delete-btn,
+.read-btn {
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+    font-size: .8rem;
+}
+
+.completed {
+    font-weight: bold;
+    padding: 10px 0;
+}
